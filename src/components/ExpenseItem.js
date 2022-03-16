@@ -5,11 +5,12 @@ import Card from './Card';
 import "./ExpenseItem.css";
 
 function ExpenseItem(props) {
-  let title = props.title;
-  const clickHandler = ()=>{
-    title = 'updatet via clickHandler'
-    console.log('button clickfunktion fired')}
+  const [title, setTitle] = useState(props.title);
   
+  const clickHandler = ()=>{
+    setTitle('updated');
+    console.log('button clickfunktion fired')}
+  console.log('expense item evaluated',props)
   return (
     <Card className="expense-item">
       <div className="expense-item">

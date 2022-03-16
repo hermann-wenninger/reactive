@@ -1,7 +1,7 @@
-import logo from './logo.svg';
+
 import './App.css';
 import ExpenseItem from './components/ExpenseItem';
-
+import NewExpense from './components/NewExpense/NewExpense';
 function App() {
   const expenses = [
     { title: "Computer", amount: 4243, date: new Date(2022, 9, 3) },
@@ -9,9 +9,10 @@ function App() {
     { title: "Bildschirm", amount: 1523, date: new Date(2022, 1, 3) },
   
   ];
-  const lex =[1,2,3]
+  
   return (
     <div className="App">
+    <NewExpense />
       <ExpenseItem
         title={expenses[0].title}
         date={expenses[0].date}
