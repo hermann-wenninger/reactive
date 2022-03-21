@@ -1,10 +1,12 @@
 import React from "react";
 //import './ExpenseForm.css';
+import React { useState } from 'react';
 
 
 const ExpenseForm = () => {
+    const [enteredTitel, setEnteredTitle] = useState('');
     const titleChangeHandler = (event) => {
-        console.log('titlechanged', event);
+        setEnteredTitle(event.target.value);
     };
 return (
   <form>
